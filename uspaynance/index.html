@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="US Healthcare Finance — one soft-pull application, near 100% patient approvals, funded to your practice in 3–7 business days.">
+    <title>US Healthcare Finance — Patient Financing Built for Clinics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">US Healthcare Finance</a>
+            <nav class="nav-links">
+                <a href="#how-it-works" class="nav-item">How it works</a>
+                <a href="#features" class="nav-item">Why us</a>
+                <a href="#network" class="nav-item">Lender network</a>
+                <a href="#industries" class="nav-item">Industries</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="tel:9496103718" class="nav-phone"><i data-lucide="phone"></i> (949) 610-3718</a>
+                <button class="btn btn-primary" onclick="window.openModal()">Get Approved</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#how-it-works" class="nav-item">How it works</a>
+            <a href="#features" class="nav-item">Why us</a>
+            <a href="#network" class="nav-item">Lender network</a>
+            <a href="#industries" class="nav-item">Industries</a>
+            <a href="tel:9496103718" class="nav-item">(949) 610-3718</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <div class="hero-badge">
+                        <span class="dot"></span> Near 100% patient approvals
+                    </div>
+                    <h1 class="hero-title">Turn more consultations into <span class="accent">paying patients.</span></h1>
+                    <p class="hero-sub">One soft-pull application. Multiple lenders. Approvals from $300 to $25,000 — you get funded in 3–7 business days.</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-lg" onclick="window.openModal()">Get Approved <i data-lucide="arrow-right"></i></button>
+                        <a href="tel:9496103718" class="btn btn-ghost btn-lg"><i data-lucide="phone"></i> Talk to a specialist</a>
+                    </div>
+                    <div class="hero-proof">
+                        <div><strong>98.4%</strong><span>Approval rate</span></div>
+                        <div><strong>3–7 days</strong><span>Funding</span></div>
+                        <div><strong>$25k</strong><span>Max approval</span></div>
+                        <div><strong>Zero</strong><span>Credit impact</span></div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="calc-card">
+                        <div class="calc-head">
+                            <span class="calc-label">Treatment amount</span>
+                            <span class="calc-tag"><span class="calc-tag-dot"></span> Live preview</span>
+                        </div>
+                        <div class="amount-pills" id="amountSelector">
+                            <button class="amount-btn" data-monthly="139" data-receive="5,000" onclick="selectAmount(this)">$5k</button>
+                            <button class="amount-btn" data-monthly="278" data-receive="10,000" onclick="selectAmount(this)">$10k</button>
+                            <button class="amount-btn" data-monthly="417" data-receive="15,000" onclick="selectAmount(this)">$15k</button>
+                            <button class="amount-btn active" data-monthly="556" data-receive="20,000" onclick="selectAmount(this)">$20k</button>
+                            <button class="amount-btn" data-monthly="695" data-receive="25,000" onclick="selectAmount(this)">$25k</button>
+                        </div>
+                        <div class="calc-row">
+                            <div class="calc-col">
+                                <span class="calc-small">Patient pays as low as</span>
+                                <span class="calc-big" id="patientPays">$556<span class="calc-unit">/mo</span></span>
+                                <span class="calc-hint">36-mo plan · 0% APR option</span>
+                            </div>
+                            <div class="calc-arrow"><i data-lucide="arrow-right"></i></div>
+                            <div class="calc-col">
+                                <span class="calc-small">You receive</span>
+                                <span class="calc-big accent" id="practiceReceives">$20,000</span>
+                                <span class="calc-hint">Upfront, in 3–7 days</span>
+                            </div>
+                        </div>
+                        <button class="calc-cta" onclick="window.openModal()">See if you qualify — no credit impact</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERS BAR -->
+        <section class="partners">
+            <div class="container">
+                <p class="partners-label">Pairing patients with industry-leading lenders</p>
+            </div>
+            <div class="partners-wrapper">
+                <div class="partners-track">
+                    <span class="partner">affirm</span>
+                    <span class="partner">Klarna</span>
+                    <span class="partner">Afterpay</span>
+                    <span class="partner">CareCredit</span>
+                    <span class="partner">PatientFi</span>
+                    <span class="partner">Cherry</span>
+                    <span class="partner">Avvance</span>
+                    <span class="partner">affirm</span>
+                    <span class="partner">Klarna</span>
+                    <span class="partner">Afterpay</span>
+                    <span class="partner">CareCredit</span>
+                    <span class="partner">PatientFi</span>
+                    <span class="partner">Cherry</span>
+                    <span class="partner">Avvance</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section id="how-it-works" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">How it works</span>
+                    <h2>From consultation to funded in under a week.</h2>
+                    <p>Our brokerage routes your patient to the right lender the first time — no denials, no stacked credit pulls.</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <h3>Patient applies</h3>
+                        <p>60-second mobile application. Soft-pull only — zero impact on their credit score.</p>
+                    </div>
+                    <div class="step-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <h3>We route the approval</h3>
+                        <p>One application checks every lender in our network. We pair them with the best program.</p>
+                    </div>
+                    <div class="step-arrow"><i data-lucide="arrow-right"></i></div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <h3>You get paid</h3>
+                        <p>Full treatment amount wired to your practice in 3–7 business days. We handle the rest.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY US -->
+        <section id="features" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Why clinics pick us</span>
+                    <h2>Built to convert more of your consult book.</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>One soft-pull, many lenders</h3>
+                        <p>A single application checks every lender in our network. No stacked hard inquiries, no declining patients twice.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i data-lucide="zap"></i></div>
+                        <h3>Approvals in 60 seconds</h3>
+                        <p>Real-time underwriting surfaces the best offer while your patient is still in the chair.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i data-lucide="banknote"></i></div>
+                        <h3>Paid in 3–7 business days</h3>
+                        <p>Full treatment amount wired upfront. We handle servicing, billing, and collection so you don't have to.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i data-lucide="percent"></i></div>
+                        <h3>0% APR promo options</h3>
+                        <p>Offer prime-tier patients zero-interest plans that make high-ticket treatments feel routine.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i data-lucide="trending-up"></i></div>
+                        <h3>Treatment acceptance lift</h3>
+                        <p>Practices typically see 20–40% more consultations convert once financing is in the room.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon"><i data-lucide="headphones"></i></div>
+                        <h3>7-day concierge support</h3>
+                        <p>Dedicated reps for you and your patients. No offshore call centers, no scripts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIG STAT -->
+        <section class="big-stat">
+            <div class="container big-stat-inner">
+                <div class="big-stat-num">98.4%</div>
+                <div class="big-stat-body">
+                    <h2>Near-100% patient approvals.</h2>
+                    <p>Our brokerage model gives every patient a second, third, and fourth look. We approve the patients other financing tools reject — FICO down to 500, no-credit, and everything in between.</p>
+                    <button class="btn btn-white btn-lg" onclick="window.openModal()">Start approving patients <i data-lucide="arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- LENDER NETWORK -->
+        <section id="network" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Lender network</span>
+                    <h2>Four tiers of approval. One application.</h2>
+                    <p>We cascade patients through every tier until they're approved — so you almost never hear "no."</p>
+                </div>
+                <div class="tiers">
+                    <div class="tier">
+                        <div class="tier-badge">Tier 1</div>
+                        <h3>Prime</h3>
+                        <p class="tier-fico">FICO 700+</p>
+                        <p>0% APR promo plans, terms up to 36 months. USA-Banks-powered.</p>
+                    </div>
+                    <div class="tier">
+                        <div class="tier-badge">Tier 2</div>
+                        <h3>Near-prime</h3>
+                        <p class="tier-fico">FICO 620–699</p>
+                        <p>Extended repayment terms with competitive APRs.</p>
+                    </div>
+                    <div class="tier">
+                        <div class="tier-badge">Tier 3</div>
+                        <h3>Sub-prime</h3>
+                        <p class="tier-fico">FICO 500–619</p>
+                        <p>Second-look programs for patients with thin or damaged files.</p>
+                    </div>
+                    <div class="tier">
+                        <div class="tier-badge">Tier 4</div>
+                        <h3>No-credit</h3>
+                        <p class="tier-fico">All FICOs</p>
+                        <p>In-house payment plans for everyone else. Nobody leaves empty-handed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDUSTRIES -->
+        <section id="industries" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Industries we serve</span>
+                    <h2>Built for cash-pay and elective practices.</h2>
+                </div>
+                <div class="industries-layout">
+                    <div class="industries-pills">
+                        <div class="industry-pill"><i data-lucide="sparkles"></i> Medical Spas</div>
+                        <div class="industry-pill"><i data-lucide="activity"></i> Chiropractors</div>
+                        <div class="industry-pill"><i data-lucide="smile"></i> Dentists</div>
+                        <div class="industry-pill"><i data-lucide="users"></i> Orthodontists</div>
+                        <div class="industry-pill"><i data-lucide="flower-2"></i> Day Spas</div>
+                        <div class="industry-pill"><i data-lucide="shopping-bag"></i> Cosmetic Stores</div>
+                        <div class="industry-pill"><i data-lucide="droplets"></i> Skin Care</div>
+                        <div class="industry-pill"><i data-lucide="heart-pulse"></i> Vet & Wellness</div>
+                        <div class="industry-pill"><i data-lucide="building"></i> Other cash-pay</div>
+                    </div>
+                    <div class="industries-highlights">
+                        <h3>Program highlights</h3>
+                        <ul>
+                            <li><i data-lucide="check-circle-2"></i><span>Approvals from <strong>$300 to $25,000</strong></span></li>
+                            <li><i data-lucide="check-circle-2"></i><span>Terms up to <strong>36 months</strong>, with 0% APR options</span></li>
+                            <li><i data-lucide="check-circle-2"></i><span><strong>No down payment</strong> required</span></li>
+                            <li><i data-lucide="check-circle-2"></i><span><strong>Soft inquiry only</strong> — no impact to credit</span></li>
+                            <li><i data-lucide="check-circle-2"></i><span>Funds to your practice in <strong>3–7 business days</strong></span></li>
+                            <li><i data-lucide="check-circle-2"></i><span>We handle <strong>billing, servicing, and collections</strong></span></li>
+                        </ul>
+                        <p class="footnote">*Active SSN or Tax ID required. No active bankruptcies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA + FORM -->
+        <section id="get-started" class="cta-section">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-copy">
+                        <span class="eyebrow">Get started</span>
+                        <h2>Ready to close more cases?</h2>
+                        <p>Tell us about your practice and a specialist will walk you through the right program — usually within the hour. Or call us now at <a href="tel:9496103718">(949) 610-3718</a>.</p>
+                        <ul class="cta-list">
+                            <li><i data-lucide="check"></i> No setup fees</li>
+                            <li><i data-lucide="check"></i> No monthly minimums</li>
+                            <li><i data-lucide="check"></i> Live in 48 hours</li>
+                        </ul>
+                    </div>
+                    <div class="cta-form-wrap">
+                        <iframe
+                            src="https://api.leadconnectorhq.com/widget/form/40RqttXDIxvF3sLYPAIZ"
+                            id="inline-40RqttXDIxvF3sLYPAIZ"
+                            data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow"
+                            data-trigger-value=""
+                            data-activation-type="alwaysActivated"
+                            data-activation-value=""
+                            data-deactivation-type="neverDeactivate"
+                            data-deactivation-value=""
+                            data-form-name="Website Form"
+                            data-height="499"
+                            data-layout-iframe-id="inline-40RqttXDIxvF3sLYPAIZ"
+                            data-form-id="40RqttXDIxvF3sLYPAIZ"
+                            title="Website Form">
+                        </iframe>
+                        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">US Healthcare Finance</div>
+                    <p class="footer-desc">Making healthcare accessible through flexible patient financing.</p>
+                    <a href="tel:9496103718" class="footer-phone"><i data-lucide="phone"></i> (949) 610-3718</a>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#features">Why us</a></li>
+                        <li><a href="#network">Lender network</a></li>
+                        <li><a href="#get-started">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="#industries">Medical Spas</a></li>
+                        <li><a href="#industries">Dental &amp; Ortho</a></li>
+                        <li><a href="#industries">Chiropractic</a></li>
+                        <li><a href="#industries">All industries</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 US Healthcare Finance. All rights reserved. All approvals subject to credit profile and eligibility requirements.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="script.js"></script>
+</body>
+</html>
